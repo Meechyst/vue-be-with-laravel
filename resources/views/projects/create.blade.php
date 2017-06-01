@@ -17,8 +17,26 @@
 
                 <span class="help is-danger" v-if="form.errors.has('description')" v-text="form.errors.get('description')"></span>
             </div>
-
+              <br>
             <div class="control">
                 <button class="button is-primary" :disabled="form.errors.any()">Create</button>
             </div>
-        </form>@endsection
+        </form>
+
+<br><br>
+        @if (count($projects))
+        	<h1 class="title is-3">My Projects</h1>
+          <hr>
+
+        	<ul>
+        		@foreach ($projects as $project)
+        			<li>
+        				<a href="#">{{ $project->name }}</a>
+        			</li>
+        		@endforeach
+        	</ul>
+
+        	<hr>
+        @endif
+
+        @endsection
