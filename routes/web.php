@@ -15,10 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/about', function(){
-return  'I am coming from web.php file!';
-});
-
-Route::get('users/{id}', function($id){
-  return $id;
-});
+Route::get('projects/create', 'ProjectsController@create');
+Route::post('projects', 'ProjectsController@store');

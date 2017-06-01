@@ -7,21 +7,21 @@
 
         <title>Laravel</title>
 
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.4.2/css/bulma.css">
+        <link rel="stylesheet" href="../css/app.css">
     </head>
     <body>
-      <div id="app">
-        <p> @{{message}}</p>
-          <br>
-        <h2>Our Users</h2>
-        <ul>
-          <li v-for="user in users">@{{user.name}}</li>
-        </ul>
+      <div id="app" class="container">
+          @yield('content')
 
 
-</div>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.js"></script>
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-      <script src="../js/app.js"></script>
+
+      </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.3.3/vue.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="../js/app.js"></script>
     </body>
 </html>
